@@ -29,4 +29,4 @@ Route::post('/login',[LoginController::class,'store']);//--> se omite name ya qu
 // Route::get('/logout',[LogoutController::class,'store'])->name('logout'); --> inseguro por la base de datos
 Route::post('/logout',[LogoutController::class,'store'])->name('logout');
 
-Route::get('/muro',[PostController::class,'index'])->name('posts.index');
+Route::get('/{user:username}',[PostController::class,'index'])->name('posts.index');
