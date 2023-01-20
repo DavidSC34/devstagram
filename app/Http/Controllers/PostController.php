@@ -16,4 +16,6 @@ class PostController extends Controller
         // dd(auth()->user());
         return view('dashboard');
     }
+
+   
 }

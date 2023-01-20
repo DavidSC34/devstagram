@@ -5,7 +5,7 @@
 @endsection
 
 @section('contenido')
-<div class="flex justify-center">
+<div class="flex justify-center mt-5">
     <div class="w-full md:w-8/12 lg:w-6/12 md:flex">
             <div class="md:w-8/12 lg:w-6/12 px-5">
                 <img src="{{asset('img/usuario.svg')}}" alt="imagen usuario">
