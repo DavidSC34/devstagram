@@ -26,6 +26,7 @@ Route::post('/crear-cuenta', [RegisterController::class,'store']);
 Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/login',[LoginController::class,'store']);//--> se omite name ya que toma el anterior
 
-Route::get('/logout',[LogoutController::class,'store'])->name('logout');
+// Route::get('/logout',[LogoutController::class,'store'])->name('logout'); --> inseguro por la base de datos
+Route::post('/logout',[LogoutController::class,'store'])->name('logout');
 
 Route::get('/muro',[PostController::class,'index'])->name('posts.index');
