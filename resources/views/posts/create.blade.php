@@ -8,7 +8,9 @@ Crea una nueva Publicacion
 
     <div class="md:flex md:items-center mt-10">
             <div class="md:w-1/2 px-10">
-                imagen aqui
+             <form id="dropzone" action="/subir" class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
+
+             </form>
             </div>
             <div class="md:w-1/2 px-10 bg-white p-10 rounded-lg shadow-xl mt-10 md:mt-0">
                 <form action="{{route('register')}}" method="POST" novalidate>
