@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Destagram - @yield('titulo')</title>
+        @stack('styles')
         @vite('resources/css/app.css')
+        @vite('resources/js/app.js')
 
        
     </head>
