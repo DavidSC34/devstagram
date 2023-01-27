@@ -36,7 +36,7 @@ Crea una nueva Publicacion
                     @enderror
 
                    <div class="mb-5">
-                     <input type="hidden" name="imagen">
+                     <input type="hidden" name="imagen" value="{{old('imagen')}}">
                         @error('imagen')  
                             <p class="bg-red-500 text-white my-2 text-sm p-2 text-center rounded-lg">{{ $message }}</p>
                         @enderror
