@@ -21,7 +21,8 @@ class PostFactory extends Factory
             'titulo'=>$this->faker->sentence(5),
             'descripcion'=>$this->faker->sentence(20),
             'imagen'=> $this->faker->uuid() . '.jpg',
-            'user_id'=> $this->faker->randomElement([1,2,3]),
+            // 'user_id'=> $this->faker->randomElement([1,2,3]),//--> con estos dio erro, por que no exisitian en tabla usuarios
+            'user_id'=> $this->faker->randomElement([4,5,6]),
         ];
     }
 }
