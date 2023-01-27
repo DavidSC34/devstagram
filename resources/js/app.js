@@ -13,12 +13,13 @@ const dropzone = new Dropzone('#dropzone',{
     uploadMultiple:false
 });
 
-dropzone.on('sending',function( file, xhr, formData){
-  console.log(file)
-})
+// dropzone.on('sending',function( file, xhr, formData){
+//   console.log(file)
+// })
 
 dropzone.on('success',function(file, response){
-    console.log(response);
+    // console.log(response);
+    document.querySelector('[name="imagen"]').value = response.imagen
 })
 
 //si esta bien en tu backend pero algo paso con esto puedes debugear
@@ -29,6 +30,6 @@ dropzone.on('error',function(file, message){
 
 //para debugear en el caso de borrar la imagen
 
-dropzone.on('removedfile',function(){
-    console.log('Archivo eleiminado');
-})
+// dropzone.on('removedfile',function(){
+//     console.log('Archivo eliminado');
+// })
