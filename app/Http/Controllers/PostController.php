@@ -64,7 +64,7 @@ class PostController extends Controller
            return redirect()->route('posts.index', auth()->user()->username);
     }
     //Aplicando route model binding
-    public function show(Post $post)
+    public function show(User $user,Post $post)
     {
         return view('posts.show',[
             'post'=>$post
