@@ -21,6 +21,18 @@
                         {{ $post->descripcion}}
                 </p>
             </div>
+            @auth
+               @if ( $post->user_id === auth()->user()->id)  
+                <form method="POST" action="{{ route('posts.destroy', $post)}}">
+                    @method('DELETE')
+                    @csrf
+                    <input type="submit"
+                    value="Eliminar publicacion"
+                    class="bg-red-500 hover:bg-red-600 p-2 rounded text-white font-bold mt-4 cursor-pointer"
+                    >
+                </form>
+                @endif
+            @endauth
         </div>
         <div class="md:w-1/2 p-5">
             <div class="shadow bg-white p-5 mb-5">
@@ -61,7 +73,7 @@
                           <p class="p-10 text-center">No hay comentarios aun</p>
                       @endif
                     </div>
-            </div>
+                </div>
         </div>
 </div>
 @endsection
