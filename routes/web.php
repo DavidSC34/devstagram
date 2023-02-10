@@ -24,6 +24,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('principal');
 });
+
+//Rutas para el perfil
+// Route::get('{user:username}/editar-perfil',[PerfilController::class,'index'])->name('perfil.index');
+// Route::post('{user:username}/editar-perfil',[PerfilController::class,'store'])->name('perfil.store');
+Route::get('/editar-perfil',[PerfilController::class,'index'])->name('perfil.index');
+Route::post('/editar-perfil',[PerfilController::class,'store'])->name('perfil.store');
+
+
 Route::get('/crear-cuenta', [RegisterController::class,'index'])->name('register');
 Route::post('/crear-cuenta', [RegisterController::class,'store']);
 
@@ -54,6 +62,3 @@ Route::post('/imagenes',[ImagenController::class,'store'])->name('imagenes.store
 Route::post('/posts/{post}/likes',[LikeController::class,'store'])->name('post.likes.store');
 Route::delete('/posts/{post}/likes',[LikeController::class,'destroy'])->name('post.likes.destroy');
 
-//Rutas para el perfil
-Route::get('{user:username}/editar-perfil',[PerfilController::class,'index'])->name('perfil.index');
-Route::post('{user:username}/editar-perfil',[PerfilController::class,'store'])->name('perfil.store');
