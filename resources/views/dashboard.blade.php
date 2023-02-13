@@ -43,6 +43,20 @@
                     {{$user->posts->count()}}
                     <span class="font-normal">Post</span>
                 </p>
+                @auth
+                <form action="" method="POST">
+                        @csrf
+                        <input type="submit" value="seguir" 
+                        class="bg-blue-600 text-white uppercase rounded-lg px-3 py-1 text-xs font-bold cursor-pointer"
+                        >
+                </form>
+                <form action="" method="POST">
+                    @csrf
+                    <input type="submit" value="dejar de seguir" 
+                    class="bg-red-600 text-white uppercase rounded-lg px-3 py-1 text-xs font-bold cursor-pointer"
+                    >
+            </form>
+                @endauth
             </div>
     </div>
 </div>
@@ -67,7 +81,7 @@
         </div> 
             
         @else
-            <p class="text-gray-600 uppercase text-sm text-center font-bold">No hay posts</p>
+            <p class="text-gray-600 uppercase text-sm text-center font-bold cursor-pointer">No hay posts</p>
         @endif
   </section>
 
