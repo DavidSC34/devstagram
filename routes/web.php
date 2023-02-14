@@ -65,5 +65,5 @@ Route::delete('/posts/{post}/likes',[LikeController::class,'destroy'])->name('po
 
 //Sifuiendo usuario
 
-Route::post('/{user:usrname}/follow',[FollowerController::class,'store'])->name('users.follow');
-Route::delete('/{user:usrname}/unfollow',[FollowerController::class,'destroy'])->name('users.unfollow');
+Route::post('/{user:username}/follow',[FollowerController::class,'store'])->name('users.follow');
+Route::delete('/{user:username}/unfollow',[FollowerController::class,'destroy'])->name('users.unfollow');
